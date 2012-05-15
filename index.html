@@ -1,9 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
+    
+    <!-- Anatomy of a Data Visualisation
+    
+        By Premasagar Rose, for LondonJS, 21st May 2012
+        Fork on GitHub: https://github.com/premasagar/anatomydataviz
+        
+        HTML5 / AngularJS slides by Elliot Sprehn <https://github.com/esprehn> and Vojta Jina <https://github.com/vojtajina> from Google, modified from AngularJS presentation by Vojta Jina at Async, Brighton <http://asyncjs.com/angular/>
+    -->
 <html ng-app="presentation">
   <head>
-    <title>AngularJS</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Anatomy of a Data Visualisation</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.7.min.js"></script>
     <script src="js/angular-1.0.0rc7.min.js"></script>
     <script src="js/presentation.js"></script>
@@ -11,10 +19,10 @@
   <body ng-controller="PresentationController">
 
     <div id="intro">
-      <img src="images/AngularShieldLogo.png">
-      <h2>Vojta Jína</h2>
+      <h1>Anatomy<br> of a<br> Data <br>Visualisation
+      <h2>Premasagar Rose</h2>
 
-      <h3 ng-show="isAfter()">@vojtajina</h3>
+      <h3 ng-show="isAfter()">@premasagar</h3>
     </div>
 
     <deck current="activeSlide" total="totalSlides">
