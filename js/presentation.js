@@ -107,10 +107,9 @@ presentation.directive('deck', function() {
 presentation.directive('slide', function() {
   return {
     restrict: 'E',
-    compile: function(tpl, attr) {
-
+        compile: function(tpl, attr) {
       if (!tpl.hasClass('non-center')) {
-        tpl.children().wrapAll('<div class="center-wrapper"><div class="center-cell"></div></div>');
+        tpl.wrapInner('<div class="center-wrapper"><div class="center-cell"></div></div>');
         tpl.addClass('center');
       }
 
