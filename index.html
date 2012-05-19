@@ -19,10 +19,10 @@
   <body ng-controller="PresentationController">
 
     <div id="intro">
-      <h1>Anatomy<br> of a<br> Data <br>Visualisation
+      <h1>Anatomy<br> of a<br> data <br>visualisation
       <h2>Premasagar Rose</h2>
 
-      <h3 ng-show="isAfter()">@premasagar</h3>
+      <h3 ng-show="isAfter()"><a href="https://twitter.com/premasagar">@premasagar</a></h3>
     </div>
 
     <deck current="activeSlide" total="totalSlides">
@@ -30,141 +30,64 @@
 
       <!--
         * introduction
-        * gonna talk about web apps
-        * who does build web apps ?
-        * it is hard
+        * foo
+        * bar
       -->
+      
 
-
-      <!--
-        * doesn't have to be hard
-        * believe we can make it simple and fun
-        * glad to be here to show AngularJS
-      -->
       <slide>
-        <h1>WHY ?</h1>
+        if not a map, then?...
       </slide>
-
-
-
-      <!--
-        * before we build an app, let's see what is the problem
-      -->
+      
       <slide>
-        <h1>A BIT OF HISTORY</h1>
+          <a href="http://www.edwardtufte.com/tufte/books_ei">
+            <img src="images/tufte/tufte_envisioning-information.gif" width="500" height="500" alt="Tufte Envisioning Information">
+          </a>
+          vision ~ <a href="http://www.edwardtufte.com">edward tufte</a>
       </slide>
-
-
-
-      <!--
-        * scientific documents + sharing them across the internet
-        * remember the gray pages with blue links ?
-        * that's what HTML was meant to be
-      -->
-      <slide title="A bit of History">
-        <img src="images/history-html.png"><br>
-        <p>Markup language for scientific documents.</p>
-      </slide>
-
-
-
-      <!--
-        * tiny DOM manipulation
-        * very slow
-        * starting round-trip web apps
-      -->
-      <slide title="A bit of History">
-        <img src="images/history-js.png"><br>
-        <p>Scripting language for HTML documents.</p>
-      </slide>
-
-
-
-      <!--
-        * still server side rendering (django, spring, rails, ...)
-        * ajax
-      -->
-      <slide title="A bit of History">
-        <img src="images/history-ajax.png"><br>
-        <img src="images/gmail-gmaps.png">
-      </slide>
-
-
-
-      <!--
-        * JS engines have improved a lot
-        * CSS has improved a lot
-        * HTML5 - cool stuff
-      -->
-      <slide title="A bit of History">
-        <img src="images/history-2012.png"><br>
-        <p><strong>Still the same level of abstraction !</strong></p>
-      </slide>
-
-
-      <!--
-        * Angular makes you more productive by rising the level of abstraction
-        * EXAMPLE TODO APP
-      -->
+      
       <slide>
-        <h1>HIGHER ABSTRACTION</h1>
+          <a href="http://www.edwardtufte.com/tufte/books_ei">
+            <img src="images/tufte/tufte-page.jpg">
+          </a>
+          symbols ~ <a href="http://www.edwardtufte.com">kisho nenkan</a>
       </slide>
-
-
-
-      <!--
-        * believe in testing
-        * very important at google
-        * do you do TDD ?
-        * it's hard
-      -->
+      
       <slide>
-        <h1>TESTING</h1>
+          <a href="http://www.edwardtufte.com/tufte/books_ei">
+            <img src="images/tufte/tufte-detail.png">
+          </a>
+          meterological ~ <a href="http://www.edwardtufte.com">kisho nenkan</a>
       </slide>
-
-
-
-      <!-- -->
-      <slide title="Testing Environment">
-        <ul>
-          <li>LIBRARIES</li>
-          <li>TOOLS</li>
-          <li>SET UP</li>
-        </ul>
-      </slide>
-
-
-
-      <!-- -->
-      <slide title="Testable Code">
-        <ul>
-          <li>DATA BINDING</li>
-          <li>DEPENDENCY INJECTION</li>
-          <li>MOCKS</li>
-        </ul>
-      </slide>
-
-
-
-      <!--
-        join the community:
-        * github
-        * mailing list
-        * youtube videos
-        * stack overflow
-      -->
-      <slide title="AngularJS">
-        <ul>
-          <li>OPEN SOURCE AT GITHUB</li>
-          <li>GOOGLE FUNDED</li>
-        </ul>
-      </slide>
-
-
-
-      <!-- -->
+      
       <slide>
-        <h1>THANK YOU</h1>
+        <blockquote>
+          "High-information graphics, such as this, convey a spirit of quantitive depth and a sense of statistical integrity"
+        </blockquote>
+          <cite>
+            <a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a>
+          </cite>
+      </slide>
+      
+      <slide>
+        <a href="http://en.wikipedia.org/wiki/Space_Invaders"><img src="images/space-invaders.jpg"></a>
+        game ~ <a href="http://en.wikipedia.org/wiki/Tomohiro_Nishikado">tomohiro nishikado</a>
+      </slide>
+      
+      <slide>
+        <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg"></a>
+        toy ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a>
+      </slide>
+      
+      <slide>
+        <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
+        vector ~ <a href="http://trsp.net">steph thirion</a>
+      </slide>
+
+      <slide>
+        <img src="images/atoms/atoms-01.jpg" class="odd">
+        <img src="images/atoms/atoms-02.jpg" class="even">
+        atomic ~ <a href="http://iamstanley.com">emily macauley</a>
       </slide>
 
     </deck>
