@@ -5,7 +5,7 @@
         By Premasagar Rose, for LondonJS, 21st May 2012
         Fork on GitHub: https://github.com/premasagar/anatomydataviz
         
-        HTML5 / AngularJS slides by Elliot Sprehn <https://github.com/esprehn> and Vojta Jina <https://github.com/vojtajina> from Google, modified from AngularJS presentation by Vojta Jina at Async, Brighton <http://asyncjs.com/angular/>
+        Modified from HTML5 / AngularJS slides by Elliot Sprehn <https://github.com/esprehn> and Vojta Jina <https://github.com/vojtajina>
     -->
 <html ng-app="presentation">
   <head>
@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.7.min.js"></script>
     <script src="js/angular-1.0.0rc7.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/prettify.js"></script>
     <script src="js/presentation.js"></script>
   </head>
   <body ng-controller="PresentationController">
@@ -26,71 +28,319 @@
     </div>
 
     <deck current="activeSlide" total="totalSlides">
-
-
       <!--
         * introduction
         * foo
         * bar
       -->
       
-
       <slide>
-        if not a map, then?...
+        <h1>vision</h1>
+        ~ <a href="https://twitter.com/DanielDickens">daniel</a>
+      </slide>
+      
+      
+      
+      <slide>
+        <h1>data capture</h1>
+        ~ ryan
+      </slide>
+      
+      <slide>
+        <ul>
+          <li>skills</li>
+          <li>capabilities</li>
+          <li>relationships</li>
+          <li>lifestyle</li>
+        </ul>
+        <p class="overlay">learnthings</p>
+      </slide>
+      
+      <slide>
+        weekly, into Salesforce
+      </slide>
+      
+      <slide>
+        <h1>concept</h1> ~ <a href="http://makeroomnow.tumblr.com">matt</a>
+      </slide>
+      
+      <slide>
+        <ul>
+          <li>heatmap?</li>
+          <li>force-directed?</li>
+          <li>charts?</li>
+        </ul>
       </slide>
       
       <slide>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte_envisioning-information.gif" width="500" height="500" alt="Tufte Envisioning Information">
+            <img src="images/tufte/tufte_envisioning-information.gif" alt="Tufte Envisioning Information" style="border:2px solid #cdc">
           </a>
-          vision ~ <a href="http://www.edwardtufte.com">edward tufte</a>
+          research
       </slide>
       
       <slide>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
             <img src="images/tufte/tufte-page.jpg">
           </a>
-          symbols ~ <a href="http://www.edwardtufte.com">kisho nenkan</a>
+          <p class="overlay">symbols ~ <a href="http://www.edwardtufte.com">kisho nenkan</a></p>
       </slide>
       
       <slide>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte-detail.png">
+            <img src="images/tufte/tufte-detail.png" style="margin-top:-70px">
           </a>
-          meterological ~ <a href="http://www.edwardtufte.com">kisho nenkan</a>
+          <p class="overlay">high-density ~ <a href="http://www.edwardtufte.com">kisho nenkan</a></p>
       </slide>
       
       <slide>
         <blockquote>
-          "High-information graphics, such as this, convey a spirit of quantitive depth and a sense of statistical integrity"
+          "High-information graphics... convey a spirit of quantitive depth and a sense of statistical integrity"
         </blockquote>
-          <cite>
-            <a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a>
-          </cite>
+        ~  <cite><a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a></cite>
+      </slide>
+      
+      <slide>
+        a symbol per learnthing?<br> or per person?
+      </slide>
+      
+      <slide>
+        <h1>sketches</h1>
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/sketch-grid.png" style="border:2px solid #ccc">
+        the community
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/sketch-key.png" style="border:2px solid #ccc">
+      </slide>
+      
+      <slide>
+        <h1>influences</h1>
       </slide>
       
       <slide>
         <a href="http://en.wikipedia.org/wiki/Space_Invaders"><img src="images/space-invaders.jpg"></a>
-        game ~ <a href="http://en.wikipedia.org/wiki/Tomohiro_Nishikado">tomohiro nishikado</a>
+        <p class="overlay">interactive ~ <a href="http://en.wikipedia.org/wiki/Tomohiro_Nishikado">tomohiro nishikado</a></p>
       </slide>
       
       <slide>
         <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg"></a>
-        toy ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a>
+        playful ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a>
       </slide>
       
       <slide>
         <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
-        vector ~ <a href="http://trsp.net">steph thirion</a>
+        aesthetic ~ <a href="http://trsp.net">steph thirion</a>
+      </slide>
+      
+      <slide>
+        <h1>self-evolution</h1>
       </slide>
 
       <slide>
-        <img src="images/atoms/atoms-01.jpg" class="odd">
-        <img src="images/atoms/atoms-02.jpg" class="even">
-        atomic ~ <a href="http://iamstanley.com">emily macauley</a>
+        <img src="images/atoms/atoms-01.jpg" class="odd" style="border:2px solid #dcb">
+        <img src="images/atoms/atoms-02.jpg" class="even" style="border:2px solid #dcb">
+        <p class="overlay">atomic ~ <a href="http://iamstanley.com">emily</a></p>
       </slide>
 
-    </deck>
+      <slide>
+        <img src="images/sciencemuseum/game-04.png" class="odd">
+          <img src="images/sciencemuseum/game-01.png" class="even">
+        <!--<img src="images/sciencemuseum/game-03.png">-->
+        <p class="overlay">interconnected ~ <a href="http://www.makemode.co.uk">gavin</a></p>
+      </slide>
+      
+      <slide>
+        <h1>artwork</h1>
+        ~ <a href="http://mathewkeller.com">mat</a>
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/circleviz-black.png">
+        too gamey?
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/circleviz-white.png">
+        poker chips?
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/circleviz-person.png">
+        skillful
+      </slide>
+      
+      <slide>
+        <h1>server</h1>
+        ~ <a href="http://www.bigbluedev.com">michael</a>
+      </slide>
+      
+      <slide>
+        <img src="images/sinatra.jpg">
+        <p class="overlay">Salesforce API → <a href="http://www.sinatrarb.com">Sinatra</a> → JSON</p>
+      </slide>
+      
+      <slide>
+        <img src="images/html6.png" width=221 style="display:inline">
+        <img src="images/css4.png" width=208 style="display:inline">
+        <h1>markup</h1>
+        ~ <a href="https://twitter.com/ramblinollie">ollie</a>
+      </slide>
+      
+      <slide>
+        <h1>interface</h1>
+        ~ <a href="http://premasagar.com">moi</a>
+      </slide>
+      
+      <slide>
+        <img src="images/raphael-logo.svg">
+        <h1><a href="http://raphaeljs.com">raphaël</a></h1>
+        JavaScript interface for drawing SVG
+      </slide>
+      
+      
+      <slide>
+        Create an SVG container:
+<pre>
+// arguments: HTML container, width, height
+var paper = Raphael(elem, 300, 300);
+</pre>
+      </slide>
+        
+      
+      
+      <slide>
+        <div id="raphael-01"></div>
+        <script>
+          (function(){
+            var container = jQuery('#raphael-01'),
+                paper = Raphael(container[0], 300, 300);
+              
+            paper.circle(150, 150, 100)
+              .attr({
+                fill: 'orange',
+                stroke: 'blue',
+                'stroke-width': 10
+              });
+        
+            container.siblings('script').remove();
+          }());
+        </script>
+        
+<pre>
+var circle = paper.circle(150, 150, 100); // x, y, radius
 
+circle.attr({
+  'fill': 'orange',
+  'stroke': 'blue',
+  'stroke-width': 10
+});
+</pre>
+      </slide>
+      
+      
+      
+      
+      <slide>
+        <div id="raphael-02"></div>
+        <script>
+          (function(){
+            var container = jQuery('#raphael-02'),
+                paper = Raphael(container[0], 300, 300);
+              
+            paper.path('M50,150 L150,250 L250,50')
+              .attr({
+                stroke: 'green',
+                'stroke-width': 10
+              });
+        
+            container.siblings('script').remove();
+          }());
+        </script>
+        
+<pre>
+paper.path('M50,150 L150,250 L250,50')
+  .attr({
+    stroke: 'green',
+    'stroke-width': 10
+  });
+</pre>
+      </slide>
+      
+      
+
+      
+            <slide>
+              <div id="raphael-03"></div>
+              <script>
+                (function(){
+                  var container = jQuery('#raphael-03'),
+                      paper = Raphael(container[0], 300, 300);
+              
+                  paper.path('M50,150 L150,250 L250,50 z')
+                    .attr({
+                      fill: 'blue'
+                    });
+        
+                  container.siblings('script').remove();
+                }());
+              </script>
+        
+<pre>
+var triangle = paper.path('M50,150 L150,250 L250,50 z')
+  .attr('fill', 'blue');
+</pre>
+            </slide>
+            
+            
+            
+      <slide>
+        <div id="raphael-04"></div>
+        <script>
+          (function(){
+            var container = jQuery('#raphael-04'),
+                paper = Raphael(container[0], 300, 300);
+              
+            paper.path("M50,150 L150,250 L250,50 z")
+              .attr({
+                fill: 'yellow',
+                stroke: 'green',
+                'stroke-width': 3,
+                cursor: 'pointer'
+              })
+              .click(function(){
+                alert('You clicked me');
+              });
+        
+            container.siblings('script').remove();
+          }());
+        </script>
+        
+<pre>
+triangle.click(function(){
+  alert('You clicked me');
+});
+</pre>
+      </slide>
+      
+      <slide>
+        <a href="http://raphaeljs.com/reference.html">...and lots more besides</a>
+      </slide>
+      
+      <slide>
+        * throttle / delay mouseover
+        * delegate
+        * overlay in HTML
+        * lookup objects
+        * time segments, pre-computed
+        * coordinate systems - didn't want them too squashed
+        * mutualistic biodiversity networks
+        
+        * PRE: data viz inspiration
+      </slide>
+    </deck>
   </body>
 </html>

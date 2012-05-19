@@ -1,3 +1,5 @@
+@import fonts/fonts.css;
+
 html, body {
   overflow: hidden;
   padding: 0;
@@ -63,10 +65,10 @@ slide {
   width: 860px;
   height: 660px;
   margin: 10px 50px;
-  padding: 20px 40px;
+  /*padding: 20px 40px;*/
   position: absolute;
   background: white url(../images/nodewing.svg) bottom right no-repeat;
-  background-size: 162px;
+  background-size: 120px;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #666;
@@ -78,6 +80,19 @@ slide {
   -moz-transform: scale(0.85) skew(-2deg);
   left: 880px;
   overflow:hidden;
+}
+
+slide.previous {
+  -webkit-transform: scale(0.85) skew(2deg) translateZ(0);
+  -moz-transform: scale(0.85) skew(2deg);
+  left: -880px;
+}
+
+slide.current {
+  left: 0;
+  -webkit-transform: none;
+  -moz-transform: none;
+  opacity: 1;
 }
 
 slide p,
@@ -95,24 +110,30 @@ slide ul {
   margin: 1em 0.5em;
 }
 
-slide img {
-  display: block;
-  margin: 0 auto;
-  max-height:400px;
-  max-width: 600px;
+slide pre, slide code {
+  font-family: 'Droid Sans Mono', 'Courier New', monospace;
+  color: black;
 }
 
-.previous {
-  -webkit-transform: scale(0.85) skew(2deg) translateZ(0);
-  -moz-transform: scale(0.85) skew(2deg);
-  left: -880px;
+slide pre {
+  font-size: 20px;
+  line-height: 28px;
+  padding: 5px 10px;
+  letter-spacing: -1px;
+  margin:40px 20px;
+  background: rgb(240, 240, 240);
+  border: 1px solid rgb(224, 224, 224);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  text-align:left;
 }
 
-.current {
-  left: 0;
-  -webkit-transform: none;
-  -moz-transform: none;
-  opacity: 1;
+slide code {
+  font-size: 95%;
+}
+
+slide a {
+    color: #31442e;
 }
 
 slide h2 {
@@ -209,16 +230,28 @@ h2.title {
   width: 100%;
 }
 
+slide img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  max-height:70%;
+}
+
+slide img.odd, slide img.even {
+    max-width: 61.8%;
+    max-height: 70%;
+    position:absolute;
+    top:62px;
+}
+
 slide img.odd {
     transform: rotate(-5deg);
     -webkit-transform: rotate(-5deg);
     -moz-transform: rotate(-5deg);
     -o-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
-    position:absolute;
     z-index:0;
-    margin-left: 162px;
-    margin-top: -30px;
+    left:50px;
 }
 
 slide img.even {
@@ -227,8 +260,49 @@ slide img.even {
     -moz-transform: rotate(3deg);
     -o-transform: rotate(3deg);
     -ms-transform: rotate(3deg);
-    position:relative;
     z-index:1;
-    margin-left: 382px;
-    margin-top: -10px;
+    right:50px;
 }
+slide .overlay {
+    margin:0 -20px;
+    padding:20px 20px;
+    background-color:rgba(52,56,48,0.618);
+    color:white;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:100;
+    width:100%;
+}
+slide .overlay a {
+    color: white;
+}
+
+/* Pretty print */
+
+.prettyprint .str, /* string content */
+.prettyprint .atv { /* a markup attribute value */
+  color: rgb(0, 138, 53); 
+}  
+.prettyprint .kwd, /* a keyword */
+.prettyprint .tag { /* a markup tag name */
+  color: rgb(0, 102, 204);
+}
+.prettyprint .com { /* a comment */
+  color: rgb(127, 127, 127); 
+  font-style: italic; 
+}  
+.prettyprint .lit { /* a literal value */
+  color: rgb(127, 0, 0);
+}  
+.prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
+.prettyprint .opn, 
+.prettyprint .clo { 
+  color: rgb(127, 127, 127); 
+}
+.prettyprint .typ, /* a type name */
+.prettyprint .atn, /* a markup attribute name */ 
+.prettyprint .dec, 
+.prettyprint .var { /* a declaration; a variable name */
+  color: rgb(127, 0, 127);
+}  

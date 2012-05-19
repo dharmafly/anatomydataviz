@@ -107,7 +107,11 @@ presentation.directive('deck', function() {
 presentation.directive('slide', function() {
   return {
     restrict: 'E',
-        compile: function(tpl, attr) {
+    compile: function(tpl, attr) {
+      if (tpl.has('.overlay').add(tpl.has('pre')).length){
+        tpl.css({backgroundImage:"none"});
+      }
+            
       if (!tpl.hasClass('non-center')) {
         tpl.wrapInner('<div class="center-wrapper"><div class="center-cell"></div></div>');
         tpl.addClass('center');
@@ -116,6 +120,8 @@ presentation.directive('slide', function() {
       if(attr.title) {
         tpl.prepend('<h2 class="title">' + attr.title + '</h2>');
       }
+
+      addPrettify();
     }
   };
 });
@@ -131,3 +137,14 @@ presentation.directive('slideCode', function() {
     }
   };
 });
+
+
+function addPrettify() {
+  jQuery('slide pre').each(function(i, pre){
+    var elem = jQuery(pre);
+    if (!elem.hasClass('noprettyprint')){
+      elem.addClass('prettyprint');
+    }
+  });
+  prettyPrint();
+}
