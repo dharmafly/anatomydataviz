@@ -108,6 +108,15 @@ presentation.directive('slide', function() {
   return {
     restrict: 'E',
     compile: function(tpl, attr) {
+      
+      /*
+      tpl.find('markdown,md')
+        .each(function(i, el){
+          jQuery(el)
+            .replaceWith(markdown.toHTML(el.innerHTML));
+        });
+      */
+      
       if (tpl.has('.overlay').add(tpl.has('pre')).length){
         tpl.css({backgroundImage:"none"});
       }

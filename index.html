@@ -16,44 +16,101 @@
     <script src="js/angular-1.0.0rc7.min.js"></script>
     <script src="js/raphael-min.js"></script>
     <script src="js/prettify.js"></script>
+    <!-- <script src="js/markdown.js"></script> -->
     <script src="js/presentation.js"></script>
   </head>
   <body ng-controller="PresentationController">
 
     <div id="intro">
-      <h1>Anatomy<br> of a<br> data <br>visualisation
-      <h2>Premasagar Rose,<br> Dharmafly</h2>
-
-      <h3 ng-show="isAfter()"><a href="https://twitter.com/premasagar">@premasagar</a></h3>
+      <h1>Anatomy<br> <small><em>of a</em></small><br> data <br>visualisation
+      <h2><a href="http://premasagar.com">Premasagar Rose</a>, <a href="http://dharmafly.com">Dharmafly</a></h2>
+      <h3><a href="https://twitter.com/premasagar">@premasagar</a></h3>
     </div>
 
     <deck current="activeSlide" total="totalSlides">
+      <slide>
+        <div id="raphael-00"></div>
+        <script>
+          (function(){
+            var container = jQuery('#raphael-00'),
+                paper = Raphael(container[0], 300, 300);
+              
+            paper.circle(150, 150, 90)
+              .attr({
+                fill: '#00b3dc',
+                stroke: '#008342',
+                'stroke-width': 50
+              });
+        
+            container.siblings('script').remove();
+          }());
+        </script>
+        
+        
+        <p>the story of the<br> <em><a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz</em><br> by <a href="http://dharmafly.com">Dharmafly</a> (2010)</p>
+      </slide>
+      
+      <slide>
+        <h1>what makes a good<br> data visualisation?</h1>
+      </slide>
+      
+      <slide>
+        <h2>data</h2>
+        <ul>
+          <li>meaningful enquiry</li>
+          <li>relevant dataset</li>
+          <li>appropriate treatment</li>
+          <li>transparent, raw data published</li>
+        </ul>
+      </slide>
+      
+      <slide>
+        <h2>appearance</h2>
+        <ul>
+          <li>beautiful</li>
+          <li>uncluttered, simple</li>
+          <li>efficient, focussed</li>
+        </ul>
+      </slide>
+      
+      <slide>
+        <h2>experience</h2>
+        <ul>
+          <li>easy to use</li>
+          <li>engaging, moreish</li>
+          <li>illuminating</li> 
+        </ul>
+      </slide>
+      
+      <slide>
+        <img src="images/southwarkcircle-logo.png" alt="Southwark Circle">
+        
+        Support, sharing, teaching<br> and learning for over-50's.
+        <p style="margin:0.4em 0 0.8em">→ Capabilities, not neediness.</p>
+        <small><em>(<a href="http://www.participle.net/about/our_mission">Participle's mission</a>)</em></small>
+      </slide>
+      
       <!--
-        * introduction
-        * foo
-        * bar
+      <slide>
+        <h1><a href="https://en.wikipedia.org/wiki/Beveridge_Report">Beveridge 1.0</a></h1>
+        <a href="https://en.wikipedia.org/wiki/William_Beveridge"><img src="images/william-beveridge.jpg"></a>
+      </slide>
       -->
       
       <slide>
-        <h1>vision</h1>
-        ~ <a href="https://twitter.com/DanielDickens">daniel</a>
+        <h1>the brief</h1>
+        * lorem ipsum *
       </slide>
-      
-      
       
       <slide>
         <h1>data capture</h1>
-        ~ ryan
-      </slide>
-      
-      <slide>
         <ul>
           <li>skills</li>
           <li>capabilities</li>
           <li>relationships</li>
           <li>lifestyle</li>
         </ul>
-        <p class="overlay">learnthings</p>
+        <p class="overlay">"learnthings"</p>
       </slide>
       
       <slide>
@@ -61,7 +118,7 @@
       </slide>
       
       <slide>
-        <h1>concept</h1> ~ <a href="http://makeroomnow.tumblr.com">matt</a>
+        <h1>what would you create?</h1>
       </slide>
       
       <slide>
@@ -69,7 +126,12 @@
           <li>heatmap?</li>
           <li>force-directed?</li>
           <li>charts?</li>
+          <li>?</li>
         </ul>
+      </slide>
+      
+      <slide>
+        <h1>idea development</h1> ~ <a href="http://makeroomnow.tumblr.com">matt</a>
       </slide>
       
       <slide>
@@ -100,41 +162,12 @@
         ~  <cite><a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a></cite>
       </slide>
       
+      <!--
       <slide>
-        a symbol per learnthing?<br> or per person?
+        one symbol per learnthing event?<br>
+        or one symbol per person, over time?
       </slide>
-      
-      <slide>
-        <h1>sketches</h1>
-      </slide>
-      
-      <slide>
-        <img src="images/circleviz/sketch-grid.png" style="border:2px solid #ccc">
-        the community
-      </slide>
-      
-      <slide>
-        <img src="images/circleviz/sketch-key.png" style="border:2px solid #ccc">
-      </slide>
-      
-      <slide>
-        <h1>influences</h1>
-      </slide>
-      
-      <slide>
-        <a href="http://en.wikipedia.org/wiki/Space_Invaders"><img src="images/space-invaders.jpg"></a>
-        <p class="overlay">interactive ~ <a href="http://en.wikipedia.org/wiki/Tomohiro_Nishikado">tomohiro nishikado</a></p>
-      </slide>
-      
-      <slide>
-        <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg"></a>
-        playful ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a>
-      </slide>
-      
-      <slide>
-        <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
-        aesthetic ~ <a href="http://trsp.net">steph thirion</a>
-      </slide>
+      -->
       
       <slide>
         <h1>self-evolution</h1>
@@ -151,6 +184,46 @@
           <img src="images/sciencemuseum/game-01.png" class="even">
         <!--<img src="images/sciencemuseum/game-03.png">-->
         <p class="overlay">interconnected ~ <a href="http://www.makemode.co.uk">gavin</a></p>
+      </slide>
+      
+      <slide>
+        <h1>influences</h1>
+      </slide>
+      
+      <slide>
+        <a href="http://en.wikipedia.org/wiki/Space_Invaders"><img src="images/space-invaders.jpg"></a>
+        <p class="overlay">interactive ~ <a href="http://en.wikipedia.org/wiki/Tomohiro_Nishikado">tomohiro nishikado</a></p>
+      </slide>
+      
+      <slide>
+        <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg"></a>
+        <p class="overlay">playful ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a></p>
+      </slide>
+      
+      <slide>
+        <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
+        <p class="overlay">minimalist ~ <a href="http://trsp.net">steph thirion</a></p>
+      </slide>
+      
+      <slide>
+        <h1>pencil sketches</h1>
+      </slide>
+      
+      <slide>
+        <blockquote>
+          "busyness = good"
+        </blockquote>
+        ~  <cite><a href="http://makeroomnow.tumblr.com">matt</a></cite>
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/sketch-grid.png" style="border:2px solid #ccc">
+        <p class="overlay">community of people</p>
+      </slide>
+      
+      <slide>
+        <img src="images/circleviz/sketch-key.png" style="border:2px solid #ccc">
+        <p class="overlay">key of symbols</p>
       </slide>
       
       <slide>
@@ -174,6 +247,14 @@
       </slide>
       
       <slide>
+        <!-- make page title into link -->
+        
+        <iframe frameborder=0 src="http://dharmafly.com/circleviz/" style="width:100%; height:100%">
+          <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot.png"></a>
+        </iframe>
+      </slide>
+      
+      <slide>
         <h1>server</h1>
         ~ <a href="http://www.bigbluedev.com">michael</a>
       </slide>
@@ -192,18 +273,18 @@
       
       <slide>
         <h1>interface</h1>
-        ~ <a href="http://premasagar.com">moi</a>
+        ~ <a href="http://premasagar.com">me</a>
       </slide>
       
       <slide>
         <img src="images/raphael-logo.svg">
         <h1><a href="http://raphaeljs.com">raphaël</a></h1>
-        JavaScript interface for drawing SVG
+        draw vectors in SVG with JavaScript
       </slide>
       
       
       <slide>
-        Create an SVG container:
+        create an SVG container
 <pre>
 // arguments: HTML container, width, height
 var paper = Raphael(elem, 300, 300);
@@ -262,7 +343,7 @@ circle.attr({
         </script>
         
 <pre>
-paper.path('M50,150 L150,250 L250,50')
+paper.path('M50,150 L150,250 L250,50') // Move to 50,150; draw line to 150,250...
   .attr({
     stroke: 'green',
     'stroke-width': 10
@@ -290,7 +371,7 @@ paper.path('M50,150 L150,250 L250,50')
               </script>
         
 <pre>
-var triangle = paper.path('M50,150 L150,250 L250,50 z')
+paper.path('M50,150 L150,250 L250,50 z') // 'z' = close the path
   .attr('fill', 'blue');
 </pre>
             </slide>
@@ -298,30 +379,35 @@ var triangle = paper.path('M50,150 L150,250 L250,50 z')
             
             
       <slide>
+        <h2>events and animation</h2>
         <div id="raphael-04"></div>
         <script>
           (function(){
             var container = jQuery('#raphael-04'),
-                paper = Raphael(container[0], 300, 300);
-              
-            paper.path("M50,150 L150,250 L250,50 z")
-              .attr({
-                fill: 'yellow',
-                stroke: 'green',
-                'stroke-width': 3,
-                cursor: 'pointer'
-              })
-              .click(function(){
-                alert('You clicked me');
-              });
+                paper = Raphael(container[0], 300, 300),
+                circle = paper.circle(150, 150, 100)
+                  .attr({
+                    fill: 'orange',
+                    stroke: 'blue',
+                    'stroke-width': 10,
+                    cursor: 'pointer'
+                  })
+                  .click(function(){
+                    //alert('You clicked me');
+                    circle.animate({cx:10, cy:290, r:5}, 600, 'bounce');
+                  });
         
             container.siblings('script').remove();
           }());
         </script>
         
 <pre>
-triangle.click(function(){
-  alert('You clicked me');
+circle.click(function(){
+  circle.animate(
+    {cx:10, cy:290, r:5}, // attr to animate (x, y, radius)
+    600,                  // animation time
+    'bounce'              // easing algorithm
+  );
 });
 </pre>
       </slide>
@@ -337,6 +423,7 @@ triangle.click(function(){
         * lookup objects
         * time segments, pre-computed
         * coordinate systems - didn't want them too squashed
+        * relationships in a row don't intersect neighbours
         * mutualistic biodiversity networks
         
         * PRE: data viz inspiration
