@@ -1,4 +1,4 @@
-@import fonts/fonts.css;
+@import url('../fonts/fonts.css');
 
 html, body {
   overflow: hidden;
