@@ -55,6 +55,11 @@
       </slide>
       
       <slide>
+        <h1>so many different types</h1>
+      </slide>
+      
+      <!--
+      <slide>
         <h1>exemplars</h1>
         <ul>
           <li>Wolfram's life</li>
@@ -63,23 +68,24 @@
           <li>last.fm artists</li>
           <li>stamen</li>
           <li>greek debt</li>
-          <li>force-directed graph</li><!-- link from later slide -->
+          <li>force-directed graph</li>
         </ul>
       </slide>
+      -->
       
       <slide>
         <h1>what makes a good<br> data visualisation?</h1>
       </slide>
       
       <slide>
-        <h2>purpose</h2>
+        <h2 style="text-align:left; margin-left:165px">purpose</h2>
         <ul>
           <li>meaningful</li>
         </ul>
       </slide>
       
       <slide>
-        <h2>data</h2>
+        <h2 style="text-align:left; margin-left:165px">data</h2>
         <ul>
           <li>selection</li> <!-- the right data for the intended purpose -->
           <li>analysis</li> <!-- not manipulated beyond the true picture -->
@@ -88,7 +94,7 @@
       </slide>
       
       <slide>
-        <h2>appearance</h2>
+        <h2 style="text-align:left; margin-left:165px">appearance</h2>
         <ul>
           <li>beautiful</li>
           <li>simple</li>
@@ -97,7 +103,7 @@
       </slide>
       
       <slide>
-        <h2>experience</h2>
+        <h2 style="text-align:left; margin-left:165px">experience</h2>
         <ul>
           <li>easy</li>
           <li>tactile</li>
@@ -303,11 +309,12 @@
       
       <slide>
         <h1>ta dah!</h1>
+        <a href="http://dharmafly.com/circleviz/">dharmafly.com/circleviz/</a>
       </slide>
       
       
       <slide>
-        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot.png"></a>
+        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot2.jpg"></a>
       </slide>
       
       <slide>
@@ -330,17 +337,16 @@
       </slide>
       
       <slide>
-        <img src="images/raphael-logo.svg">
+        <a href="http://raphaeljs.com"><img src="images/raphael-logo.svg"></a>
         <h1><a href="http://raphaeljs.com">raphaël</a></h1>
         draws vectors in SVG with JavaScript
       </slide>
       
       
       <slide>
-        create an SVG container
+        create an SVG container:
 <pre>
-// arguments: HTML container, width, height
-var paper = Raphael(elem, 300, 300);
+var paper = Raphael(htmlContainer, 300, 300); // elem, width, height
 </pre>
       </slide>
         
@@ -466,7 +472,10 @@ circle.click(function(){
       </slide>
       
       <slide>
-        <a href="http://raphaeljs.com/reference.html">etc.</a>
+        <a href="http://raphaeljs.com/reference.html">
+          <img src="images/raphael-logo.svg">
+          etc.
+        </a>
       </slide>
       
       <slide>
@@ -484,24 +493,59 @@ circle.click(function(){
       </slide>
       
       <slide>
+        <h1>ow, the grid</h1>
+        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot.png"></a>
+      </slide>
+      
+      <!--
+        * overlay infobox in HTML
+        * coordinate systems - didn't want them too squashed
+        * relationships in a row don't intersect neighbours
+      -->
+      
+      <slide>
         <h1>need... more... power</h1>
         <ul>
-          <li>throttle mouseovers</li>
-          <li>delegate events</li>
-          <li>SVG groups & classnames</li>
+          <li>throttle</li>
+          <li>delegate</li>
+          <li>SVG groups & classes</li>
           <li>translateZ</li>
-          <li><a href="http://jsperf.com">jsperf, jsperf, jsperf</a></li>
+          <li><a href="http://jsperf.com">jsperf</a></li>
+          <li>boil it down</li>
         </ul>
       </slide>
       <!-- have code examples for throttling, delegating -->
       
+      <slide>
+        <h1>summary</h1>
+        <ul style="font-size:0.8em">
+          <li>many possibilities</li>
+          <li>purpose, data, appearance, experience</li>
+          <li>build the right thing</li>
+          <li>evolve ideas</li>
+        </ul>
+      </slide>
       
-      <!-- Other points
-        * overlay in HTML
-        * coordinate systems - didn't want them too squashed
-        * relationships in a row don't intersect neighbours
-        * boil it down: mutualistic biodiversity networks
-      -->
+      <slide>
+        <h1>summary</h1>
+        <ul style="font-size:0.8em">
+          <li>start on paper</li>
+          <li>iterate</li>
+          <li>use the right tools</li>
+          <li>know thy bottlenecks and optimise</li>
+        </ul>
+      </slide>
+      
+      <slide>
+        <h1>Data Viz Lab</h1>
+        
+        July 27, Aug 10, Aug 24<br><br>
+        
+        Lab for the Recently Possible, Brighton<br>
+        <a href="http://l4rp.com">L4RP.com</a><br><br>
+        
+        <p class="overlay">sign up: <a href="http://lanyrd.com/2012/l4rp-dv1">dfly.in/datavizlab</a></p>
+      </slide>
       
       <slide>
         <h1>thank you</h1>
@@ -510,20 +554,6 @@ circle.click(function(){
         
         <p class="overlay">anatomydataviz.dharmafly.com</p>
       </slide>
-      
-      <!--
-      SUMMARY
-      
-      difft ways of doing it
-      purpose, data, appearance, experience
-      understand the audience, the available data and the purpose
-      research - build the right thing
-      play to strengths
-      start on paper
-      iterate
-      use the right tool (link to slide)
-      know thy bottlenecks and optimise accordingly
-      -->
       
       <!-- DATA VIZ LAB -->
       
