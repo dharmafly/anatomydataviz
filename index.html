@@ -57,10 +57,10 @@
       <slide>
         <h2>data</h2>
         <ul>
-          <li>meaningful enquiry</li>
-          <li>relevant dataset</li>
-          <li>appropriate treatment</li>
-          <li>transparent, raw data published</li>
+          <li>purposeful</li>
+          <li>relevant</li> <!-- is it the right data for the intended purpose? -->
+          <li>fair</li> <!-- not manipulated such that it does not reflect a true picture -->
+          <li>raw</li>
         </ul>
       </slide>
       
@@ -68,17 +68,18 @@
         <h2>appearance</h2>
         <ul>
           <li>beautiful</li>
-          <li>uncluttered, simple</li>
-          <li>efficient, focussed</li>
+          <li>simple</li>
+          <li>efficient</li>
         </ul>
       </slide>
       
       <slide>
         <h2>experience</h2>
         <ul>
-          <li>easy to use</li>
-          <li>engaging, moreish</li>
-          <li>illuminating</li> 
+          <li>easy</li>
+          <li>moreish</li>
+          <li>illuminating</li>
+          <li>quick</li>
         </ul>
       </slide>
       
@@ -99,11 +100,11 @@
       
       <slide>
         <h1>the brief</h1>
-        * lorem ipsum *
+        show the Circle's social impact
       </slide>
       
       <slide>
-        <h1>data capture</h1>
+        <h2>data profile</h2>
         <ul>
           <li>skills</li>
           <li>capabilities</li>
@@ -124,7 +125,7 @@
       <slide>
         <ul>
           <li>heatmap?</li>
-          <li>force-directed?</li>
+          <li>force-directed graph?</li>
           <li>charts?</li>
           <li>?</li>
         </ul>
@@ -136,9 +137,8 @@
       
       <slide>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte_envisioning-information.gif" alt="Tufte Envisioning Information" style="border:2px solid #cdc">
+            <img src="images/tufte/tufte-envisioning.png" alt="Tufte Envisioning Information" style="border:1px solid #ddd">
           </a>
-          research
       </slide>
       
       <slide>
@@ -202,11 +202,7 @@
       
       <slide>
         <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
-        <p class="overlay">minimalist ~ <a href="http://trsp.net">steph thirion</a></p>
-      </slide>
-      
-      <slide>
-        <h1>pencil sketches</h1>
+        <p class="overlay">crisp ~ <a href="http://trsp.net">steph thirion</a></p>
       </slide>
       
       <slide>
@@ -214,6 +210,10 @@
           "busyness = good"
         </blockquote>
         ~  <cite><a href="http://makeroomnow.tumblr.com">matt</a></cite>
+      </slide>
+      
+      <slide>
+        <h1>pencil sketches</h1>
       </slide>
       
       <slide>
@@ -387,8 +387,8 @@ paper.path('M50,150 L150,250 L250,50 z') // 'z' = close the path
                 paper = Raphael(container[0], 300, 300),
                 circle = paper.circle(150, 150, 100)
                   .attr({
-                    fill: 'orange',
-                    stroke: 'blue',
+                    fill: 'yellow',
+                    stroke: 'orange',
                     'stroke-width': 10,
                     cursor: 'pointer'
                   })
