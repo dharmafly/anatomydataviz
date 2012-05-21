@@ -104,7 +104,7 @@ slide.current {
 
 slide p,
 slide li {
-  white-space: pre-line;
+  /*white-space: pre-line;*/
 }
 
 slide li {
@@ -140,7 +140,7 @@ slide code {
 }
 
 slide a {
-    color: #31442e;
+    color: #666;
 }
 
 slide h2 {
@@ -154,6 +154,10 @@ slide h3 {
   font-size: 1em;
   margin: 0;
   font-weight: 400;
+}
+
+slide small {
+    font-size:0.7em;
 }
 
 #counter {
