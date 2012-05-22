@@ -118,7 +118,7 @@ presentation.directive('slide', function() {
       */
       
       if (tpl.has('.overlay').add(tpl.has('pre')).add(tpl.has('iframe')).length){
-        tpl.css({backgroundImage:"none"});
+        tpl.addClass('full');
       }
             
       if (!tpl.hasClass('non-center')) {

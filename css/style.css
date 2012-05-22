@@ -89,6 +89,10 @@ slide {
   overflow:hidden;
 }
 
+slide.full {
+    background-image:none;
+}
+
 slide.previous {
   -webkit-transform: scale(0.85) skew(2deg) translateZ(0);
   -moz-transform: scale(0.85) skew(2deg);
