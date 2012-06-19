@@ -487,8 +487,11 @@
       <article>
         <h3>create an SVG container:</h3>
 <pre>
-         // arguments: elem, width, height
-var paper = Raphael(htmlContainer, 300, 300);
+var paper = Raphael(
+    htmlContainer, // DOM node or id
+    300, // width
+    300 // height
+);
 </pre>
       </article>
             
