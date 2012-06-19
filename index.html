@@ -5,22 +5,12 @@
 -->
 
 <html>
-
   <head>
-
     <title>Anatomy of a Data Visualisation</title>
-
     <meta charset='utf-8'>
 
-    <script src='slides/slides.js'></script>
-
-    <script src="js/raphael-min.js"></script>
-
-
     <style>
-
     body {
-
       background: #a6c664 !important;
       background: -moz-linear-gradient(-45deg,  #a6c664 0%, #b4df5b 100%) !important;
       background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a6c664), color-stop(100%,#b4df5b)) !important;
@@ -29,40 +19,47 @@
       background: -ms-linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
       background: linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c664', endColorstr='#b4df5b',GradientType=1 ) !important;
-
     }
     
-    section.slides.template-async article.biglogo {
-
+    section.slides article.tight ul, section.slides article.tight li {
+        padding-top:0;
+        padding-bottom:0;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    
+    section.slides article.tight li::before {
+        content: '•';
+    }
+    
+    section.slides article.tight li.category {
+        padding:0;
+        margin:1em 0 0.618em;
+    }
+    
+    section.slides article.tight li.category::before {
+        content: '';
     }
 
     .source {
-
       background-color: rgba(255, 255, 255, 0.6);
       color: #333333;
       padding: 0.7em;
       border-radius: 3px;
       border: 1px solid #b4df5b;
-
     }
 
     a {
-
-      color: #718645 !important;
+      color: #6B8A28 !important;
       text-decoration: none;
-
     }
 
     a:hover {
-
       border-bottom: 1px dotted #718645 !important;
-
     }
 
     .imagesover {
-
       margin-top: 2em;
-
     }
 
     img.odd {
@@ -84,9 +81,10 @@
       z-index: 1;
       right: 50px;
     }
-    
     </style>
 
+    <script src='slides/slides.js'></script>
+    <script src="js/raphael-min.js"></script>
   </head>
 
   <body style='display: none'>
@@ -105,15 +103,17 @@
           <a href="http://premasagar.com">Premasagar Rose</a>, <a href="http://dharmafly.com">Dharmafly</a>
           <br>
           <a href="https://twitter.com/premasagar">@premasagar</a>
-          <br>
-          Navigate using ←→ arrow keys.
+        </p>
+        
+        <p style="position:absolute; bottom:3em;">
+          <small>Navigate using ←→ arrow keys.</small>
         </p>
 
       </article>
       
       <article>
 
-        <h3>The story of the <a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz by <a href="http://dharmafly.com">Dharmafly</a></h3>
+        <h3>The story of the <a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz by <a href="http://dharmafly.com">Dharmafly</a>.</h3>
 
         <div id="raphael-00"></div>
         <script>
@@ -149,7 +149,7 @@
 
       <article class="fill">
 
-        <h3>Outgoing email, over 23 years</h3>
+        <h3>Wolfram's outgoing email, over 23 years</h3>
         <p>
           <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/"><img src="images/exemplars/wolfram_outgoing-mail-diurnal-image.png" style="width: 100%; height: 100%;"></a>
           <div class='source'>
@@ -236,38 +236,38 @@
       </article>
       
       <article>
-        <h3>purpose</h3>
-        <ul>
+        <h2>purpose</h2>
+        <ol>
           <li>meaningful</li>
-        </ul>
+        </ol>
       </article>
       
       <article>
-        <h3>data</h3>
-        <ul>
+        <h2>data</h2>
+        <ol>
           <li>selection</li> <!-- the right data for the intended purpose -->
           <li>analysis</li> <!-- not manipulated beyond the true picture -->
           <li>source</li>
-        </ul>
+        </ol>
       </article>
       
       <article>
-        <h3>appearance</h3>
-        <ul>
+        <h2>appearance</h2>
+        <ol>
           <li>beautiful</li>
           <li>simple</li>
           <li>efficient</li>
-        </ul>
+        </ol>
       </article>
       
       <article>
-        <h3>experience</h3>
-        <ul>
+        <h2>experience</h2>
+        <ol>
           <li>easy</li>
           <li>tactile</li>
           <li>moreish</li>
           <li>illuminating</li>
-        </ul>
+        </ol>
       </article>
       
       <article>
@@ -275,22 +275,22 @@
       </article>
       
       <article>
-        <h1>the brief</h1>
+        <h2>the brief</h2>
         <p>show Southwark Circle's <em>social impact</em></p>
       </article>
       
       <article>
         <h2><a href="http://southwarkcircle.org.uk"><img src="images/southwarkcircle-logo.png" alt="Southwark Circle"></a></h2>
-        <p>Support, sharing, teaching<br> and learning for older people.</p>
+        <p>support, sharing, teaching<br> and learning for older people</p>
       </article>
       
       <article>
-        <h1>purpose</h1>
+        <h2>purpose</h2>
         <p>improve the "Third Age" of life</p>
       </article>
       
       <article>
-        <h3>Supporting the little things in life</h3>
+        <h2>supporting the little things in life</h2>
         <ul>
           <li>finding a plumber</li>
           <li>help with facebook</li>
@@ -305,7 +305,7 @@
       </article>
       
       <article>
-        <h3>the helpers logged...</h3>
+        <h2>the helpers logged "learnthings"</h2>
         <ul>
           <li>skills</li>
           <li>capabilities</li>
@@ -315,8 +315,8 @@
       </article>
       
       <article>
-        <h1>"learnthings"</h1>
-        <p>events, by category, person & location</p>
+        <h2>"learnthings"</h2>
+        <p>personal social impact events,<br> by category, person and locations</p>
       </article>
       
       <article>
@@ -340,16 +340,18 @@
       </article>
       
       <article>
-          <p><a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte-envisioning.png" alt="Tufte Envisioning Information" style="display: block; margin: 0 auto; border:1px solid #ddd">
-          </a></p>
+          <a href="http://www.edwardtufte.com/tufte/books_ei">
+            <img src="images/tufte/tufte-envisioning.png" alt="Tufte Envisioning Information" style="height:550px; display: block; margin: 0 auto; border:1px solid #ddd">
+          </a>
+
+          <h3 style="margin-top: 1em;">research ~ <a href="http://www.edwardtufte.com">edward tufte</a></h3>
       </article>
       
       <article>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
             <img src="images/tufte/tufte-page.jpg" style="height: 550px; display: block; margin: 0 auto;">
           </a>
-          <h3 style="margin-top: 1em;"><a href="http://www.edwardtufte.com">kisho nenkan</a></h3>
+          <h3 style="margin-top: 1em;">symbols ~ <a href="http://www.edwardtufte.com">kisho nenkan</a></h3>
       </article>
       
       <article>
@@ -369,19 +371,19 @@
       </article>
       
       <article>
-        <h1>previous work</h1>
+        <h1>evolving previous work</h1>
       </article>
 
       <article>
         <h3>atomic <small>~ people, networks & collisions</small></h3>
         <div class="imagesover">
-          <img src="images/atoms/atoms-01.jpg" class="odd" style="height: 425px;">
-          <img src="images/atoms/atoms-02.jpg" class="even" style="height: 425px;">
+          <img src="images/atoms/atoms-01.jpg" class="odd" style="height: 425px; border:1px solid #ca9;">
+          <img src="images/atoms/atoms-02.jpg" class="even" style="height: 425px; border:1px solid #ca9;">
         </div>
       </article>
 
       <article>
-        <h3>interconnected <small>~ <a href="http://www.bbc.co.uk/news/science-environment-11906435">game concept for Science Museum</a></small></h3>
+        <h3>interconnected <small>~ <a href="http://www.bbc.co.uk/news/science-environment-11906435">game concept for the Science Museum</a></small></h3>
         <div class="imagesover">
           <img src="images/sciencemuseum/game-04.png" class="odd" style="height: 275px;">
           <img src="images/sciencemuseum/game-01.png" class="even" style="height: 275px;">
@@ -390,7 +392,7 @@
       </article>
       
       <article>
-        <h1>mood</h1>
+        <h1>inspirations</h1>
       </article>
       
       <article>
@@ -414,7 +416,7 @@
       </article>
       
       <article>
-        <h1>pencil</h1>
+        <h1>pencil on paper</h1>
       </article>
       
       <article>
@@ -458,12 +460,12 @@
       </article>
       
       <article>
-        <h1>how did we do it?</h1>
+        <h1>how did we make it?</h1>
       </article>
       
-      <article>
+      <article class="fill">
         <img src="images/sinatra.jpg" style="height: 500px; display: block; margin: 0 auto;">
-        <p class="overlay">Salesforce API → <a href="http://www.sinatrarb.com">Sinatra</a> → JSON</p>
+        <h3>Salesforce API → <a href="http://www.sinatrarb.com">Sinatra</a> → JSON</h3>
       </article>
       
       <article>
@@ -485,7 +487,8 @@
       <article>
         <h3>create an SVG container:</h3>
 <pre>
-var paper = Raphael(htmlContainer, 300, 300); // elem, width, height
+         // arguments: elem, width, height
+var paper = Raphael(htmlContainer, 300, 300);
 </pre>
       </article>
             
@@ -671,27 +674,28 @@ circle.click(function(){
       </article>
       
       <article>
-        <h1>Data Viz Lab</h1>
+        <h1>☄ Data Viz Lab</h1>
+        <p><a href="http://lanyrd.com/2012/l4rp-dv1">July 27</a>, <a href="http://lanyrd.com/2012/l4rp-dv2">Aug 10</a>, <a href="http://lanyrd.com/2012/l4rp-dv3">Aug 24</a></p>
+        <p><a href="https://twitter.com/L4RP">@L4RP</a> / <a href="http://l4rp.com">L4RP.com</a></p>
+        <p>3 free events in summer 2012 for designers, journalists & programmers.</p>
+        <p>At <a href="http://dharmafly.com">Dharmafly's</a> <a href="http://l4rp.com"><strong><em>Lab for the Recently Possible</em></strong></a>, Brighton & Hove, UK.</p>
         
-        <p>3 free events over summer for designers, journalists & programmers</p>
         
-        <p>Lab for the Recently Possible, Brighton. <a href="http://l4rp.com">(L4RP.com)</a></p>
-        
-        <p>sign up: <a href="http://lanyrd.com/2012/l4rp-dv1">July 27</a>, <a href="http://lanyrd.com/2012/l4rp-dv2">Aug 10</a>, <a href="http://lanyrd.com/2012/l4rp-dv3">Aug 24</a></p>
       </article>
       
       <article>
-        <h1>thank you</h1>
-        <p>questions?</p>
-        <p><small><a href="https://twitter.com/premasagar">~ @premasagar</a></small></p>
+        <h1>any questions?</h1>
+        <p>
+            <a href="https://twitter.com/premasagar">@premasagar</a>
+        </p>
         
-        <p>anatomydataviz.dharmafly.com</p>
+        <p style="position:absolute; bottom:3em;">these slides: <a href="http://anatomydataviz.dharmafly.com">anatomydataviz.dharmafly.com</a></p>
       </article>
       
-      <article>
+      <article class="tight">
         <h3>resources / credits</h3>
-        <ul style="font-size: 0.45em;">
-          <li>
+        <ul style="font-size: 0.9em;">
+          <li class="category">
             <strong>participle</strong>
             <ul>
               <li><a href="http://www.participle.net/about/our_mission">participle's mission</a></li>
@@ -700,7 +704,7 @@ circle.click(function(){
             </ul>
           </li>
           
-          <li>
+          <li class="category">
             <strong>dharmafly team</strong>
             <ul>
               <li>project lead / javascript ~ <a href="http://premasagar.com">premasagar rose</a></li>
@@ -710,7 +714,7 @@ circle.click(function(){
               <li>markup / style ~ <a href="https://twitter.com/ramblinollie">ollie bettany</a></li>
             </ul>
             
-          <li>
+          <li class="category">
             <strong>dharmafly past work</strong>
             <ul>
               <li>atoms sketches ~ <a href="http://www.stanleyjamespress.com">emily macauley</a></li>
@@ -719,7 +723,7 @@ circle.click(function(){
           </li>
         </ul>
       </article>
-
+      
     </section>
 
     <script>
