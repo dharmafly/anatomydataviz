@@ -118,8 +118,9 @@
         <div id="raphael-00"></div>
         <script>
           (function(){
-            var container = jQuery('#raphael-00'),
-                paper = Raphael(container[0], 300, 300);
+            var container = document.getElementById('raphael-00'),
+                scriptElem = container.parentNode.getElementsByTagName('script')[0],
+                paper = Raphael(container, 300, 300);
               
             paper.circle(150, 150, 90)
               .attr({
@@ -128,7 +129,7 @@
                 'stroke-width': 50
               });
         
-            container.siblings('script').remove();
+            ccontainer.parentNode.removeChild(scriptElem);
           }());
         </script>
 
