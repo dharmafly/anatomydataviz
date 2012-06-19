@@ -1,34 +1,118 @@
-<!doctype html>
-    
-    <!-- Anatomy of a Data Visualisation
-    
-        By Premasagar Rose, for LondonJS, 21st May 2012
-        Fork on GitHub: https://github.com/premasagar/anatomydataviz
-        
-        Modified from HTML5 / AngularJS slides by Elliot Sprehn <https://github.com/esprehn> and Vojta Jina <https://github.com/vojtajina>
-    -->
-<html ng-app="presentation">
+<!DOCTYPE html>
+
+<!--
+  articles based on Google's HTML5articles: http://code.google.com/p/html5articles/
+-->
+
+<html>
+
   <head>
+
     <title>Anatomy of a Data Visualisation</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css?v2">
-    <script src="js/jquery-1.7.min.js"></script>
-    <script src="js/angular-1.0.0rc7.min.js"></script>
+
+    <meta charset='utf-8'>
+
+    <script src='slides/slides.js'></script>
+
     <script src="js/raphael-min.js"></script>
-    <script src="js/prettify.js"></script>
-    <script src="js/presentation.js"></script>
+
+
+    <style>
+
+    body {
+
+      background: #a6c664 !important;
+      background: -moz-linear-gradient(-45deg,  #a6c664 0%, #b4df5b 100%) !important;
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a6c664), color-stop(100%,#b4df5b)) !important;
+      background: -webkit-linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
+      background: -o-linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
+      background: -ms-linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
+      background: linear-gradient(-45deg,  #a6c664 0%,#b4df5b 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c664', endColorstr='#b4df5b',GradientType=1 ) !important;
+
+    }
+    
+    section.slides.template-async article.biglogo {
+
+    }
+
+    .source {
+
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #333333;
+      padding: 0.7em;
+      border-radius: 3px;
+      border: 1px solid #b4df5b;
+
+    }
+
+    a {
+
+      color: #718645 !important;
+      text-decoration: none;
+
+    }
+
+    a:hover {
+
+      border-bottom: 1px dotted #718645 !important;
+
+    }
+
+    .imagesover {
+
+      margin-top: 2em;
+
+    }
+
+    img.odd {
+      transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      z-index: 0;
+      left: 50px;
+    }
+
+    img.even {
+      transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      z-index: 1;
+      right: 50px;
+    }
+    
+    </style>
+
   </head>
-  <body ng-controller="PresentationController">
 
-    <div id="intro">
-      <h1>Anatomy<br> <small><em>of a</em></small><br> data <br>visualisation
-      <h2><a href="http://premasagar.com">Premasagar Rose</a>, <a href="http://dharmafly.com">Dharmafly</a></h2>
-      <h3><a href="https://twitter.com/premasagar">@premasagar</a></h3>
-      <small style="font-size:0.6em">Navigate with ←→ arrow keys (best in <a href="https://tools.google.com/dlpage/chromesxs">Canary Chrome</a>)</small>
-    </div>
+  <body style='display: none'>
 
-    <deck current="activeSlide" total="totalSlides">
-      <slide>
+    <section class='slides layout-regular template-async'>
+      
+      <!-- Your articles (<article>s) go here. Delete or comment out the
+           articles below. -->
+
+      <article>
+
+        <h1>
+          Anatomy of a data visualisation.
+        </h1>
+        <p>
+          <a href="http://premasagar.com">Premasagar Rose</a>, <a href="http://dharmafly.com">Dharmafly</a>
+          <br>
+          <a href="https://twitter.com/premasagar">@premasagar</a>
+        </p>
+
+      </article>
+      
+      <article>
+
+        <h3>The story of the <a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz by <a href="http://dharmafly.com">Dharmafly</a></h3>
+
         <div id="raphael-00"></div>
         <script>
           (function(){
@@ -45,130 +129,165 @@
             container.siblings('script').remove();
           }());
         </script>
-        
-        
-        <p>the story of the<br> <em><a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz</em><br> by <a href="http://dharmafly.com">Dharmafly</a></p>
-      </slide>
-      
-      <slide>
-        <strong>data viz</strong> = psychology + art + maths + interaction design + programming
-      </slide>
-      
-      <slide>
+
+      </article>
+
+      <article>
+
+        <h1>data viz = psychology + art + maths + interaction design + programming</h1>
+
+      </article>
+
+      <article>
+
         <h1>so many different types</h1>
-      </slide>
+
+      </article>
+
+      <article class="fill">
+
+        <h3>Outgoing email, over 23 years</h3>
+        <p>
+          <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/"><img src="images/exemplars/wolfram_outgoing-mail-diurnal-image.png" style="width: 100%; height: 100%;"></a>
+          <div class='source'>
+          Click slide for more info.
+        </div>
+        </p>
+
+      </article>
+
+      <article class="fill">
+        <h3>Flights over Europe</h3>
+        <a href="http://vimeo.com/11739091"><img src="images/exemplars/flights-over-europe.jpg" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide to play video.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Outgoing email, over 23 years</h1>
-        <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/"><img src="images/exemplars/wolfram_outgoing-mail-diurnal-image.png"></a>
-      </slide>
+      <article class="fill">
+        <h3>Ruby on Rails commit history</h3>
+        <a href="http://vimeo.com/2979844"><img src="images/exemplars/rails-commit-history.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide to play video.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Flights over Europe</h1>
-        <a href="http://vimeo.com/11739091"><img src="images/exemplars/flights-over-europe.jpg"></a>
-      </slide>
+      <article class="fill">
+        <h3>Heatmaps</h3>
+        <a href="http://dylanvester.com/post/Creating-Heat-Maps-with-NET-20-(C-Sharp).aspx"><img src="images/exemplars/heatmap.jpg" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Ruby on Rails<br> commit history</h1>
-        <a href="http://vimeo.com/2979844"><img src="images/exemplars/rails-commit-history.jpg"></a>
-      </slide>
+      <article class="fill">
+        <h3>Greek debt</h3>
+        <a href="http://demonocracy.info/infographics/eu/debt_greek/debt_greek.html"><img src="images/exemplars/greek-debt.jpg" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Heatmaps</h1>
-        <a href="http://dylanvester.com/post/Creating-Heat-Maps-with-NET-20-(C-Sharp).aspx"><img src="images/exemplars/heatmap.jpg"></a>
-      </slide>
+      <article class="fill">
+        <h3>Euro crisis</h3>
+        <a href="http://www.nytimes.com/interactive/2011/10/23/sunday-review/an-overview-of-the-euro-crisis.html"><img src="images/exemplars/euro-crisis.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Greek debt</h1>
-        <a href="http://demonocracy.info/infographics/eu/debt_greek/debt_greek.html"><img src="images/exemplars/greek-debt.jpg"></a>
-      </slide>
+      <article class="fill">
+        <h3>Force-directed graph</h3>
+        <a href="http://mbostock.github.com/d3/ex/force.html"><img src="images/exemplars/force-directed.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Euro crisis</h1>
-        <a href="http://www.nytimes.com/interactive/2011/10/23/sunday-review/an-overview-of-the-euro-crisis.html"><img src="images/exemplars/euro-crisis.png"></a>
-      </slide>
+      <article class="fill">
+        <h3>Growth of Airbnb over time</h3>
+        <a href="http://stamen.com/clients/airbnb"><img src="images/exemplars/airbnb-growth.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Force-directed graph</h1>
-        <a href="http://mbostock.github.com/d3/ex/force.html"><img src="images/exemplars/force-directed.png"></a>
-      </slide>
+      <article class="fill">
+        <h3>Hacker News article popularity</h3>
+        <a href="http://hn.metamx.com"><img src="images/exemplars/hacker-news.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Growth of Airbnb over time</h1>
-        <a href="http://stamen.com/clients/airbnb"><img src="images/exemplars/airbnb-growth.png"></a>
-      </slide>
+      <article class="fill">
+        <h3>d3.js examples</h3>
+        <a href="https://github.com/mbostock/d3/wiki/Gallery"><img src="images/exemplars/d3-examples.png" style="width: 100%;"></a>
+        <div class='source'>
+          Click slide for more info.
+        </div>
+      </article>
       
-      <slide class="full">
-        <h1>Hacker News article popularity</h1>
-        <a href="http://hn.metamx.com"><img src="images/exemplars/hacker-news.png"></a>
-      </slide>
+      <article>
+        <h1>what makes a good data visualisation?</h1>
+      </article>
       
-      <slide class="full">
-        <h1>d3.js examples</h1>
-        <a href="https://github.com/mbostock/d3/wiki/Gallery"><img src="images/exemplars/d3-examples.png"></a>
-      </slide>
-      
-      <slide>
-        <h1>what makes a good<br> data visualisation?</h1>
-      </slide>
-      
-      <slide>
-        <h2 style="text-align:left; margin-left:165px">purpose</h2>
+      <article>
+        <h3>purpose</h3>
         <ul>
           <li>meaningful</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
-        <h2 style="text-align:left; margin-left:165px">data</h2>
+      <article>
+        <h3>data</h3>
         <ul>
           <li>selection</li> <!-- the right data for the intended purpose -->
           <li>analysis</li> <!-- not manipulated beyond the true picture -->
           <li>source</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
-        <h2 style="text-align:left; margin-left:165px">appearance</h2>
+      <article>
+        <h3>appearance</h3>
         <ul>
           <li>beautiful</li>
           <li>simple</li>
           <li>efficient</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
-        <h2 style="text-align:left; margin-left:165px">experience</h2>
+      <article>
+        <h3>experience</h3>
         <ul>
           <li>easy</li>
           <li>tactile</li>
           <li>moreish</li>
           <li>illuminating</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>what we did</h1>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>the brief</h1>
-        show Southwark Circle's <em>social impact</em>
-      </slide>
+        <p>show Southwark Circle's <em>social impact</em></p>
+      </article>
       
-      <slide>
-        <a href="http://southwarkcircle.org.uk"><img src="images/southwarkcircle-logo.png" alt="Southwark Circle"></a>
-        
-        Support, sharing, teaching<br> and learning for older people.
-      </slide>
+      <article>
+        <h2><a href="http://southwarkcircle.org.uk"><img src="images/southwarkcircle-logo.png" alt="Southwark Circle"></a></h2>
+        <p>Support, sharing, teaching<br> and learning for older people.</p>
+      </article>
       
-      <slide>
+      <article>
         <h1>purpose</h1>
-        improve the "Third Age" of life
-      </slide>
+        <p>improve the "Third Age" of life</p>
+      </article>
       
-      <slide>
-        <h2>Supporting the little things in life</h2>
+      <article>
+        <h3>Supporting the little things in life</h3>
         <ul>
           <li>finding a plumber</li>
           <li>help with facebook</li>
@@ -176,208 +295,204 @@
           <li>teaching spanish</li>
           <li>socials</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>raw ingredients</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <h2>the helpers logged...</h2>
+      <article>
+        <h3>the helpers logged...</h3>
         <ul>
           <li>skills</li>
           <li>capabilities</li>
           <li>relationships</li>
           <li>lifestyle</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>"learnthings"</h1>
-        events, by category, person & location
-      </slide>
+        <p>events, by category, person & location</p>
+      </article>
       
-      <slide>
+      <article>
         <h1>the brief</h1>
-        show Southwark Circle's <em>social impact</em>
+        <p>show Southwark Circle's <em>social impact</em></p>
         <!-- internal tool, for funders, policy, starting new schemes -->
-      </slide>
+      </article>
       
-      <slide>
-        <h1>what would you create?</h1>
-      </slide>
-      
-      <slide>
+      <article>
+        <h3>what would you create?</h3>
         <ul><!-- thumbnails -->
           <li>heatmap?</li>
           <li>force-directed graph?</li>
           <li>charts?</li>
           <li>?</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>idea development</h1>
-      </slide>
+      </article>
       
-      <!-- TUFT! -->
-      <slide>
+      <article>
+          <p><a href="http://www.edwardtufte.com/tufte/books_ei">
+            <img src="images/tufte/tufte-envisioning.png" alt="Tufte Envisioning Information" style="display: block; margin: 0 auto; border:1px solid #ddd">
+          </a></p>
+      </article>
+      
+      <article>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte-envisioning.png" alt="Tufte Envisioning Information" style="border:1px solid #ddd">
+            <img src="images/tufte/tufte-page.jpg" style="height: 550px; display: block; margin: 0 auto;">
           </a>
-      </slide>
+          <h3 style="margin-top: 1em;"><a href="http://www.edwardtufte.com">kisho nenkan</a></h3>
+      </article>
       
-      <slide>
+      <article>
           <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte-page.jpg">
-          </a>
-          <p class="overlay">symbols ~ <a href="http://www.edwardtufte.com">kisho nenkan</a></p>
-      </slide>
-      
-      <slide>
-          <a href="http://www.edwardtufte.com/tufte/books_ei">
-            <img src="images/tufte/tufte-detail.png" style="margin-top:-70px">
+            <img src="images/tufte/tufte-detail.png" style="height: 550px; display: block; margin: 0 auto;">
           </a>
           <p class="overlay">high-density ~ <a href="http://www.edwardtufte.com">kisho nenkan</a></p>
-      </slide>
+      </article>
       
-      <slide>
-        <blockquote>
-          "High-information graphics... convey a spirit of quantitive depth and a sense of statistical integrity"
-        </blockquote>
-        ~  <cite><a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a></cite>
-      </slide>
+      <article>
+        <q>
+          High-information graphics... convey a spirit of quantitive depth and a sense of statistical integrity
+        </q>
+        <div class='author'>
+          <a href="http://www.edwardtufte.com/tufte/books_ei">edward tufte</a>
+        </div>
+      </article>
       
-      <!--
-      <slide>
-        one symbol per learnthing event?<br>
-        or one symbol per person, over time?
-      </slide>
-      -->
-      
-      <slide>
+      <article>
         <h1>previous work</h1>
-      </slide>
+      </article>
 
-      <slide>
-        <img src="images/atoms/atoms-01.jpg" class="odd" style="border:2px solid #dcb">
-        <img src="images/atoms/atoms-02.jpg" class="even" style="border:2px solid #dcb">
-        <p class="overlay">atomic <small>~ people, networks & collisions</small></p>
-      </slide>
+      <article>
+        <h3>atomic <small>~ people, networks & collisions</small></h3>
+        <div class="imagesover">
+          <img src="images/atoms/atoms-01.jpg" class="odd" style="height: 425px;">
+          <img src="images/atoms/atoms-02.jpg" class="even" style="height: 425px;">
+        </div>
+      </article>
 
-      <slide>
-        <img src="images/sciencemuseum/game-04.png" class="odd">
-          <img src="images/sciencemuseum/game-01.png" class="even">
-        <!--<img src="images/sciencemuseum/game-03.png">-->
-        <p class="overlay">interconnected <small>~ <a href="http://www.bbc.co.uk/news/science-environment-11906435">game concept for Science Museum</a></small></p>
-      </slide>
+      <article>
+        <h3>interconnected <small>~ <a href="http://www.bbc.co.uk/news/science-environment-11906435">game concept for Science Museum</a></small></h3>
+        <div class="imagesover">
+          <img src="images/sciencemuseum/game-04.png" class="odd" style="height: 275px;">
+          <img src="images/sciencemuseum/game-01.png" class="even" style="height: 275px;">
+          <!--<img src="images/sciencemuseum/game-03.png">-->
+        </div>
+      </article>
       
-      <slide>
+      <article>
         <h1>mood</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png"></a>
-        <p class="overlay">eliss ~ <a href="http://trsp.net">steph thirion</a></p>
-      </slide>
+      <article>
+        <h3>eliss ~ <a href="http://trsp.net">steph thirion</a></h3>
+        <a href="http://www.toucheliss.com"><img src="images/eliss/eliss-burst.png" style="display: block; margin: 0 auto; margin-top: 2em;"></a>
+      </article>
       
-      <slide>
-        <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg"></a>
-        <p class="overlay">noby noby boy ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a></p>
-      </slide>
+      <article>
+        <h3>noby noby boy ~ <a href="http://en.wikipedia.org/wiki/Keita_Takahashi">keita takahashi</a></h3>
+        <a href="http://o--o.jp"><img src="images/noby-noby-boy.jpg" style="display: block; margin: 0 auto; margin-top: 2em;"></a>
+      </article>
       
-      <slide>
-        <blockquote>
-          "busyness = good"
-        </blockquote>
-        ~  <cite><a href="http://makeroomnow.tumblr.com">matt weston</a></cite>
-      </slide>
+      <article>
+        <q>
+          busyness = good
+        </q>
+
+        <div class='author'>
+          <a href="http://makeroomnow.tumblr.com">matt weston</a>
+        </div>
+      </article>
       
-      <slide>
+      <article>
         <h1>pencil</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <img src="images/circleviz/sketch-grid.png" style="border:2px solid #ccc">
-        <p class="overlay">community of people</p>
-      </slide>
+      <article>
+        <h3>community of people</h3>
+        <img src="images/circleviz/sketch-grid.png" style="display: block; margin: 0 auto; margin-top: 2em;">
+      </article>
       
-      <slide>
-        <img src="images/circleviz/sketch-key.png" style="border:2px solid #ccc">
-        <p class="overlay">key of symbols</p>
-      </slide>
+      <article>
+        <h3>key of symbols</h3>
+        <img src="images/circleviz/sketch-key.png" style="display: block; margin: 0 auto; margin-top: 2em;">
+      </article>
       
-      <slide>
+      <article>
         <h1>mockups</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <img src="images/circleviz/circleviz-black.png">
-        too gamey?
-      </slide>
+      <article>
+        <img src="images/circleviz/circleviz-black.png" style="height: 500px; display: block; margin: 0 auto;">
+        <p>too gamey?</p>
+      </article>
       
-      <slide>
-        <img src="images/circleviz/circleviz-white.png">
-        poker chips?
-      </slide>
+      <article>
+        <img src="images/circleviz/circleviz-white.png" style="height: 500px; display: block; margin: 0 auto;">
+        <p>poker chips?</p>
+      </article>
       
-      <slide>
-        <img src="images/circleviz/circleviz-person.png">
-        skillful
-      </slide>
+      <article>
+        <img src="images/circleviz/circleviz-person.png" style="height: 500px; display: block; margin: 0 auto;">
+        <p>skillful</p>
+      </article>
     
       
-      <slide>
+      <article>
         <h1>ta dah!</h1>
-        <a href="http://dharmafly.com/circleviz/">dharmafly.com/circleviz/</a>
-      </slide>
+        <p><a href="http://dharmafly.com/circleviz/">dharmafly.com/circleviz/</a></p>
+      </article>
       
       
-      <slide>
-        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot.jpg"></a>
-      </slide>
+      <article>
+        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-screenshot.jpg" style="height: 500px;"></a>
+      </article>
       
-      <slide>
+      <article>
         <h1>how did we do it?</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <img src="images/sinatra.jpg">
+      <article>
+        <img src="images/sinatra.jpg" style="height: 500px; display: block; margin: 0 auto;">
         <p class="overlay">Salesforce API → <a href="http://www.sinatrarb.com">Sinatra</a> → JSON</p>
-      </slide>
+      </article>
       
-      <slide>
-        <img src="images/html6.png" style="display:inline">
-        <img src="images/css4.png" style="display:inline">
-        <h1>html6, css4</h1>
-      </slide>
+      <article>
+        <img src="images/html6.png" style="display:inline; height: 410px;">
+        <img src="images/css4.png" style="display:inline; height: 400px;">
+        <h2>html6, css4</h2>
+      </article>
       
-      <slide>
+      <article>
         <h1>interface</h1>
-      </slide>
+      </article>
       
-      <slide>
-        <a href="http://raphaeljs.com"><img src="images/raphael-logo.svg"></a>
-        <h1><a href="http://raphaeljs.com">raphaël</a></h1>
-        draws vectors in SVG with JavaScript
-      </slide>
+      <article>
+        <h1><img src="images/raphael-logo.svg" style="height: 50px">  <a href="http://raphaeljs.com">raphaël</a></h1>
+        <p>draws vectors in SVG with JavaScript</p>
+      </article>
       
       
-      <slide>
-        create an SVG container:
+      <article>
+        <h3>create an SVG container:</h3>
 <pre>
 var paper = Raphael(htmlContainer, 300, 300); // elem, width, height
 </pre>
-      </slide>
-        
-      
-      
-      <slide>
+      </article>
+            
+      <article>
         <div id="raphael-01"></div>
         <script>
           (function(){
-            var container = jQuery('#raphael-01'),
-                paper = Raphael(container[0], 300, 300);
+            var container = document.getElementById('raphael-01'),
+                scriptElem = container.parentNode.getElementsByTagName('script')[0],
+                paper = Raphael(container, 300, 300);
               
             paper.circle(150, 150, 100)
               .attr({
@@ -386,30 +501,30 @@ var paper = Raphael(htmlContainer, 300, 300); // elem, width, height
                 'stroke-width': 10
               });
         
-            container.siblings('script').remove();
+            container.parentNode.removeChild(scriptElem);
           }());
         </script>
         
-<pre>
-var circle = paper.circle(150, 150, 100); // x, y, radius
+<pre>var circle = paper.circle(150, 150, 100); // x, y, radius
 
 circle.attr({
   'fill': 'orange',
   'stroke': 'blue',
   'stroke-width': 10
-});
-</pre>
-      </slide>
+});</pre>
+
+      </article>
       
       
       
       
-      <slide>
+      <article>
         <div id="raphael-02"></div>
         <script>
           (function(){
-            var container = jQuery('#raphael-02'),
-                paper = Raphael(container[0], 300, 300);
+            var container = document.getElementById('raphael-02'),
+                scriptElem = container.parentNode.getElementsByTagName('script')[0],
+                paper = Raphael(container, 300, 300);
               
             paper.path('M50,150 L150,250 L250,50')
               .attr({
@@ -417,7 +532,7 @@ circle.attr({
                 'stroke-width': 10
               });
         
-            container.siblings('script').remove();
+            container.parentNode.removeChild(scriptElem);
           }());
         </script>
         
@@ -428,24 +543,26 @@ paper.path('M50,150 L150,250 L250,50') // Move to, line to...
     'stroke-width': 10
   });
 </pre>
-      </slide>
+      </article>
       
       
 
       
-            <slide>
+            <article>
               <div id="raphael-03"></div>
               <script>
                 (function(){
-                  var container = jQuery('#raphael-03'),
-                      paper = Raphael(container[0], 300, 300);
+                  var container = document.getElementById('raphael-03'),
+                      scriptElem = container.parentNode.getElementsByTagName('script')[0],
+                      paper = Raphael(container, 300, 300);
               
                   paper.path('M50,150 L150,250 L250,50 z')
                     .attr({
                       fill: 'blue'
                     });
         
-                  container.siblings('script').remove();
+                  container.parentNode.removeChild(scriptElem);
+
                 }());
               </script>
         
@@ -453,17 +570,18 @@ paper.path('M50,150 L150,250 L250,50') // Move to, line to...
 paper.path('M50,150 L150,250 L250,50 z') // 'z' = close the path
   .attr('fill', 'blue');
 </pre>
-            </slide>
+            </article>
             
             
             
-      <slide>
-        <h2>events and animation</h2>
+      <article>
+        <h3>events and animation</h3>
         <div id="raphael-04"></div>
         <script>
           (function(){
-            var container = jQuery('#raphael-04'),
-                paper = Raphael(container[0], 300, 300),
+            var container = document.getElementById('raphael-04'),
+                scriptElem = container.parentNode.getElementsByTagName('script')[0],
+                paper = Raphael(container, 300, 300),
                 circle = paper.circle(150, 150, 100)
                   .attr({
                     fill: 'yellow',
@@ -476,7 +594,7 @@ paper.path('M50,150 L150,250 L250,50 z') // 'z' = close the path
                     circle.animate({cx:10, cy:290, r:5}, 600, 'bounce');
                   });
         
-            container.siblings('script').remove();
+            container.parentNode.removeChild(scriptElem);
           }());
         </script>
         
@@ -489,33 +607,33 @@ circle.click(function(){
   );
 });
 </pre>
-      </slide>
+      </article>
       
-      <slide>
-        <a href="http://raphaeljs.com/reference.html">
-          <img src="images/raphael-logo.svg">
-          etc.
+      <article>
+        <a href="http://raphaeljs.com/reference.html" style="display: block; margin: 12% auto 0; width: 10em;">
+          <img src="images/raphael-logo.svg" style="width: 10em; text-align: center;">
+          <p>And much more...</p>
         </a>
-      </slide>
+      </article>
       
-      <slide>
-        <h1>know thy<br> bottlenecks</h1>
-      </slide>
+      <article>
+        <h1>know thy bottlenecks</h1>
+      </article>
       
-      <slide>
-        <h1>oh, the time slider!</h1>
-        <img src="images/circleviz/circleviz-timeslider.png">
+      <article>
+        <h3>oh, the time slider!</h3>
+        <img src="images/circleviz/circleviz-timeslider.png" style="margin-top: 2em; margin-bottom: 1.5em;">
         <ul>
           <li>time segments</li>
           <li>pre-compute into lookups</li>
           <!-- ><li>next time, use <a href="http://documentcloud.github.com/underscore/">underscore.js</a></li> -->
         </ul>
-      </slide>
+      </article>
       
-      <slide>
-        <h1>coordinate systems!</h1>
-        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-grid.png"></a>
-      </slide>
+      <article>
+        <h3>coordinate systems!</h3>
+        <a href="http://dharmafly.com/circleviz/"><img src="images/circleviz/circleviz-grid.png" style="height: 380px; margin-top: 2em;"></a>
+      </article>
       
       <!--
         * overlay infobox in HTML
@@ -523,8 +641,8 @@ circle.click(function(){
         * relationships in a row don't intersect neighbours
       -->
       
-      <slide>
-        <h1>need... more... power</h1>
+      <article>
+        <h3>need... more... power</h3>
         <ul>
           <li>throttle</li>
           <li>delegate</li>
@@ -533,12 +651,12 @@ circle.click(function(){
           <li><a href="http://jsperf.com">jsperf</a></li>
           <li>boil it down</li>
         </ul>
-      </slide>
+      </article>
       <!-- have code examples for throttling, delegating -->
       
-      <slide>
-        <h1>summary</h1>
-        <ul style="font-size:0.8em">
+      <article>
+        <h3>summary</h3>
+        <ul>
           <li>many different forms</li>
           <li>purpose, data, appearance, experience</li>
           <li>build the right thing</li>
@@ -547,35 +665,32 @@ circle.click(function(){
           <li>use the right tools</li>
           <li>optimise the bottlenecks</li>
         </ul>
-      </slide>
+      </article>
       
-      <slide>
+      <article>
         <h1>Data Viz Lab</h1>
         
-        3 free events over summer for<br>
-        designers, journalists & programmers<br>
-        <br>
+        <p>3 free events over summer for designers, journalists & programmers</p>
         
-        Lab for the Recently Possible, Brighton<br>
-        <a href="http://l4rp.com">L4RP.com</a><br><br>
+        <p>Lab for the Recently Possible, Brighton. <a href="http://l4rp.com">(L4RP.com)</a></p>
         
-        <p class="overlay">sign up: <a href="http://lanyrd.com/2012/l4rp-dv1">July 27</a>, <a href="http://lanyrd.com/2012/l4rp-dv2">Aug 10</a>, <a href="http://lanyrd.com/2012/l4rp-dv3">Aug 24</a></p>
-      </slide>
+        <p>sign up: <a href="http://lanyrd.com/2012/l4rp-dv1">July 27</a>, <a href="http://lanyrd.com/2012/l4rp-dv2">Aug 10</a>, <a href="http://lanyrd.com/2012/l4rp-dv3">Aug 24</a></p>
+      </article>
       
-      <slide>
+      <article>
         <h1>thank you</h1>
-        questions?<br><br>
-        <small><a href="https://twitter.com/premasagar">~ @premasagar</a></small>
+        <p>questions?</p>
+        <p><small><a href="https://twitter.com/premasagar">~ @premasagar</a></small></p>
         
-        <p class="overlay">anatomydataviz.dharmafly.com</p>
-      </slide>
+        <p>anatomydataviz.dharmafly.com</p>
+      </article>
       
-      <slide>
-        <h1>resources / credits</h1>
-        <ul style="font-size:0.45em">
+      <article>
+        <h3>resources / credits</h3>
+        <ul style="font-size: 0.45em;">
           <li>
             <strong>participle</strong>
-            <ul style="margin-top:-0.3em">
+            <ul>
               <li><a href="http://www.participle.net/about/our_mission">participle's mission</a></li>
               <li>southwark circle lead ~ <a href="https://twitter.com/DanielDickens">daniel dickens</a></li>
               <li>southwark circle data architect ~ ryan lang</li>
@@ -584,7 +699,7 @@ circle.click(function(){
           
           <li>
             <strong>dharmafly team</strong>
-            <ul style="margin-top:-0.3em">
+            <ul>
               <li>project lead / javascript ~ <a href="http://premasagar.com">premasagar rose</a></li>
               <li>concept lead ~ <a href="http://makeroomnow.tumblr.com">matt weston</a></li>
               <li>visual design ~ <a href="http://mathewkeller.com">mat keller</a></li>
@@ -594,26 +709,16 @@ circle.click(function(){
             
           <li>
             <strong>dharmafly past work</strong>
-            <ul style="margin-top:-0.3em">
+            <ul>
               <li>atoms sketches ~ <a href="http://www.stanleyjamespress.com">emily macauley</a></li>
               <li>science museum storyboard ~ <a href="http://gavinocarroll.com">gavin o'carroll</a></li>
             </ul>
           </li>
         </ul>
-      </slide>
-    </deck>
-    
-    <!-- ga -->
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-2150808-7']);
-      _gaq.push(['_trackPageview']);
+      </article>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      }());
-    </script>
+    </section>
+
   </body>
+  
 </html>
