@@ -52,9 +52,14 @@
     a {
       color: #6B8A28 !important;
       text-decoration: none;
+      cursor:pointer;
+    }
+    
+    article.fill h3 a {
+        color:#38441c !important;
     }
 
-    a:hover {
+    a:hover, article.fill h3 a {
       border-bottom: 1px dotted #718645 !important;
     }
 
@@ -90,12 +95,7 @@
   <body style='display: none'>
 
     <section class='slides layout-regular template-async'>
-      
-      <!-- Your articles (<article>s) go here. Delete or comment out the
-           articles below. -->
-
       <article>
-
         <h1>
           Anatomy of a data visualisation.
         </h1>
@@ -108,11 +108,9 @@
         <div style="position:absolute; bottom:2em;">
             <p>these slides: <a href="http://anatomydataviz.dharmafly.com"><strong>anatomydataviz.dharmafly.com</a></strong><br><small><em>← arrow keys →</em></small></p>
         </div>
-
       </article>
       
       <article>
-
         <h3>The story of the <a href="http://southwarkcircle.org.uk">Southwark Circle</a> data viz by <a href="http://dharmafly.com">Dharmafly</a>.</h3>
 
         <div id="raphael-00"></div>
@@ -132,103 +130,67 @@
             container.parentNode.removeChild(scriptElem);
           }());
         </script>
-
       </article>
 
       <article>
-
-        <h1>data viz = psychology + art + maths + interaction design + programming</h1>
-
+        <h1>data viz =</h1>
+        <h2>concept + psychology + art + maths + interaction design + engineering</h2>
       </article>
 
       <article>
-
         <h1>so many different types</h1>
-
       </article>
 
       <article class="fill">
-
-        <h3>Wolfram's outgoing email, over 23 years</h3>
+        <h3><a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/">Wolfram's outgoing email, over 23 years</a></h3>
         <p>
           <a href="http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/"><img src="images/exemplars/wolfram_outgoing-mail-diurnal-image.png" style="width: 100%; height: 100%;"></a>
-          <div class='source'>
-          Click slide for more info.
-        </div>
         </p>
-
       </article>
 
       <article class="fill">
-        <h3>Flights over Europe</h3>
+        <h3><a href="http://vimeo.com/11739091">Flights over Europe</a></h3>
         <a href="http://vimeo.com/11739091"><img src="images/exemplars/flights-over-europe.jpg" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide to play video.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Ruby on Rails commit history</h3>
+        <h3><a href="http://vimeo.com/2979844">Ruby on Rails commit history</a></h3>
         <a href="http://vimeo.com/2979844"><img src="images/exemplars/rails-commit-history.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide to play video.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Heatmaps</h3>
+        <h3><a href="http://dylanvester.com/post/Creating-Heat-Maps-with-NET-20-(C-Sharp).aspx">Heatmaps</a></h3>
         <a href="http://dylanvester.com/post/Creating-Heat-Maps-with-NET-20-(C-Sharp).aspx"><img src="images/exemplars/heatmap.jpg" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Greek debt</h3>
+        <h3><a href="http://demonocracy.info/infographics/eu/debt_greek/debt_greek.html">Greek debt</a></h3>
         <a href="http://demonocracy.info/infographics/eu/debt_greek/debt_greek.html"><img src="images/exemplars/greek-debt.jpg" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Euro crisis</h3>
+        <h3><a href="http://www.nytimes.com/interactive/2011/10/23/sunday-review/an-overview-of-the-euro-crisis.html">Euro crisis</a></h3>
         <a href="http://www.nytimes.com/interactive/2011/10/23/sunday-review/an-overview-of-the-euro-crisis.html"><img src="images/exemplars/euro-crisis.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Force-directed graph</h3>
+        <h3><a href="http://mbostock.github.com/d3/ex/force.html">Force-directed graph</h3>
         <a href="http://mbostock.github.com/d3/ex/force.html"><img src="images/exemplars/force-directed.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Growth of Airbnb over time</h3>
+        <h3><a href="http://stamen.com/clients/airbnb">Growth of Airbnb over time</a></h3>
         <a href="http://stamen.com/clients/airbnb"><img src="images/exemplars/airbnb-growth.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>Hacker News article popularity</h3>
+        <h3><a href="http://hn.metamx.com">Hacker News article popularity</a></h3>
         <a href="http://hn.metamx.com"><img src="images/exemplars/hacker-news.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article class="fill">
-        <h3>d3.js examples</h3>
+        <h3><a href="https://github.com/mbostock/d3/wiki/Gallery">d3.js examples</a></h3>
         <a href="https://github.com/mbostock/d3/wiki/Gallery"><img src="images/exemplars/d3-examples.png" style="width: 100%;"></a>
-        <div class='source'>
-          Click slide for more info.
-        </div>
       </article>
       
       <article>
@@ -275,8 +237,8 @@
       </article>
       
       <article>
+        <q>show Southwark Circle's <em>social impact</em></q>
         <h2>the brief</h2>
-        <p>show Southwark Circle's <em>social impact</em></p>
       </article>
       
       <article>
@@ -320,8 +282,8 @@
       </article>
       
       <article>
-        <h1>the brief</h1>
-        <p>show Southwark Circle's <em>social impact</em></p>
+        <q>show Southwark Circle's <em>social impact</em></q>
+        <h2>the brief</h2>
         <!-- internal tool, for funders, policy, starting new schemes -->
       </article>
       
@@ -385,8 +347,8 @@
       <article>
         <h3>interconnected <small>~ <a href="http://www.bbc.co.uk/news/science-environment-11906435">game concept for the Science Museum</a></small></h3>
         <div class="imagesover">
-          <img src="images/sciencemuseum/game-04.png" class="odd" style="height: 275px;">
-          <img src="images/sciencemuseum/game-01.png" class="even" style="height: 275px;">
+          <img src="images/sciencemuseum/game-04.png" class="odd" style="height: 285px;">
+          <img src="images/sciencemuseum/game-01.png" class="even" style="height: 285px;">
           <!--<img src="images/sciencemuseum/game-03.png">-->
         </div>
       </article>
@@ -521,7 +483,6 @@ circle.attr({
   'stroke': 'blue',
   'stroke-width': 10
 });</pre>
-
       </article>
       
       
@@ -619,9 +580,9 @@ circle.click(function(){
       </article>
       
       <article>
-        <a href="http://raphaeljs.com/reference.html" style="display: block; margin: 12% auto 0; width: 10em;">
-          <img src="images/raphael-logo.svg" style="width: 10em; text-align: center;">
-          <p>And much more...</p>
+        <a href="http://raphaeljs.com/reference.html" style="display: block; margin: 12% auto 0; width: 10em; text-align: center;">
+          <img src="images/raphael-logo.svg" style="width: 10em">
+          <p>and much more...</p>
         </a>
       </article>
       
@@ -726,8 +687,20 @@ circle.click(function(){
           </li>
         </ul>
       </article>
-      
     </section>
+    
+    <script>
+    // Open links in new tab
+    (function(){
+        var links = document.getElementsByTagName('a'),
+            i = 0,
+            len = links.length;
+        
+        for (; i<len; i++){
+            links[i].setAttribute('target', '_blank');
+        }
+    }());
+    </script>
 
     <script>
       var _gaq = _gaq || [];
